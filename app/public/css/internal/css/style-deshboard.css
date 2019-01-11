@@ -1,0 +1,241 @@
+/*Roboto*/
+@font-face {
+  font-family: 'Roboto-Thin';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(../../../fonts/Roboto-Thin.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(../../../fonts/Roboto-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(../../../fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(../../../fonts/Roboto-Medium.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(../../../fonts/Roboto-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(../../../fonts/Roboto-Black.ttf) format('truetype');
+}
+/*Roboto Slab*/
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Slab Thin'), local('RobotoSlab-Thin'), url(../../../fonts/RobotoSlab-Thin.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../../../fonts/RobotoSlab-Light.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(../../../fonts/RobotoSlab-Regular.ttf) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(../../../fonts/RobotoSlab-Bold.ttf) format('woff');
+}
+.circle-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.square-small {
+  width: 40px;
+  height: 40px;
+}
+.bottom-border {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #006b77;
+}
+.right-border {
+  border-style: solid;
+  border-width: 0px 1px 0px 0px;
+  border-color: #006b77;
+}
+.left-border {
+  border-style: solid;
+  border-width: 0px 0px 0px 1px;
+  border-color: #006b77;
+}
+.top-border {
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #006b77;
+}
+.border-dashed-large-gray {
+  border-color: #c7c7c7;
+  border-width: 1px;
+  border-style: dashed;
+  width: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  font-family: Roboto;
+  overflow-x: hidden;
+  background-color: #f1f1f1;
+  position: absolute;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.content-deshboard-1::-webkit-scrollbar {
+  display: none;
+}
+label {
+  margin-bottom: 0px !important;
+}
+.invisible {
+  display: none;
+  visibility: hidden;
+}
+#alert {
+  position: absolute !important;
+  left: 20%;
+  top: 20%;
+}
+.base-colors {
+  background-color: #006b77;
+  color: #fff;
+}
+@media screen and (min-width: 200px) and (max-width: 500px), screen and (orientation: portrait) {
+  .content-deshboard-1 {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 8vh;
+    background-color: #fff;
+    overflow: auto;
+  }
+  .menu-deshboard {
+    background-color: #006b77;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    height: 8%;
+    box-shadow: 0px 0px 1px 1px #c7c7c7;
+    z-index: 1000;
+  }
+  .menu-deshboard nav {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-deshboard nav ul {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+  }
+  .menu-deshboard nav ul li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    font-size: 4vh;
+    width: 8vh;
+    height: 100%;
+    min-height: 100%;
+  }
+  .menu-deshboard nav ul li:hover {
+    background-color: #0097a7;
+  }
+  .menu-deshboard nav ul li span {
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    margin: -40% -60%;
+    padding: 10%;
+  }
+  .menu-deshboard nav ul li span i {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+}
+/* set element styles to fit tablet and higher(desktop) */
+@media screen and (min-width: 500px) and (orientation: landscape) {
+  .content-deshboard-1 {
+    position: absolute;
+    width: 80%;
+    min-height: 100%;
+    left: 50%;
+    margin-left: -40%;
+    margin-top: 3.45%;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 2px #c7c7c7;
+    overflow: auto;
+  }
+  .menu-deshboard {
+    background-color: #006b77;
+    position: absolute;
+    width: 80%;
+    height: 6.9%;
+    left: 50%;
+    margin-left: -40%;
+    box-shadow: 0px 0px 10px 2px #c7c7c7;
+    z-index: 0;
+  }
+  .menu-deshboard ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .menu-deshboard ul li {
+    float: left;
+    position: relative;
+    text-align: center;
+    font-size: 2.6vw;
+    width: 5%;
+    height: 100%;
+    padding: 0;
+  }
+  .menu-deshboard ul li:hover {
+    background-color: #0097a7;
+  }
+  .menu-deshboard ul li i {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+}

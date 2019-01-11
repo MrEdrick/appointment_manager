@@ -1,0 +1,32 @@
+@import url(style-fonts.less);
+@import url(style-colors.less);
+@import url(style-dimensions.less);
+
+
+@media screen and (min-width: 200px) and (max-width: 500px),  screen and (orientation: portrait) {
+    .body-wallpaper {
+		width: 100%;
+		min-height: 100%;
+		padding-top: 10%;
+		font-size: 6vh;
+		position: relative;
+		text-align: center;
+		color: @main-color-dark; 
+		background-color: #fff;
+    }	
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+    .body-wallpaper {
+		width: 100%;
+		min-height: 100%;
+		font-family: Roboto;
+		position: absolute;
+		padding-top: 8%;
+    	font-size: 5vw;
+		display: block;
+		text-align: center; 
+		color: @main-color-dark; 
+		background-color: #fff;
+    }
+}

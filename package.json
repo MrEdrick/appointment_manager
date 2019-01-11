@@ -1,0 +1,34 @@
+{
+  "name": "server_am",
+  "version": "1.0.0",
+  "description": "Server for Appointment Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrEdrick/server_am.git"
+  },
+  "author": "Edrick Alves Manoel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrEdrick/server_am/issues"
+  },
+  "homepage": "https://github.com/MrEdrick/server_am#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "commander": "^2.9.0",
+    "confirm-dialog": "^0.1.2",
+    "connect-multiparty": "^2.0.0",
+    "consign": "^0.1.6",
+    "dialogs": "^1.1.20",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "express-validator": "^3.2.0",
+    "moment": "^2.18.1",
+    "mysql": "^2.14.1"
+  }
+}

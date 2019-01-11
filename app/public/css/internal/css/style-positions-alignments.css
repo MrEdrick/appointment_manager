@@ -1,0 +1,12 @@
+.wrapper-absolute {
+  position: absolute;
+}
+.wrapper-block {
+  display: block;
+}
+.wrapper-inline {
+  display: inline;
+}
+.wrapper-inline-block {
+  display: inline-block;
+}

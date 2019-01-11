@@ -1,0 +1,165 @@
+@import url(style-input.less);
+@import url(style-fonts.less);
+
+@media screen and (min-width: 200px) and (max-width: 500px),  screen and (orientation: portrait) {
+    .title-label{
+        font-family: Roboto;
+        color: @main-color-dark;
+        font-size: 3vh; 
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .topic-title-label{
+        font-family: Roboto;
+        color: @main-color-dark;
+        font-size: 2vh; 
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+
+    .sub-title-label{
+        font-family: Roboto;
+        color: @main-color;
+        font-size: 2vh; 
+        display: block;
+        font-weight: 600;
+    }
+
+    .input-edit-anamnese{
+        .input-edit;
+        margin-bottom: 1%;
+    }
+
+    .anamnese{
+        margin-bottom: 4%;
+    }
+
+    .anamnese-question{
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+    .switch-question{
+        width: 50%;
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+    .content-anamnese{
+        position: relative;
+        padding: 1%;
+        overflow: auto; 
+    }
+
+    .anamnese {
+        position: relative;
+        height: auto;
+        display: block;
+        overflow: auto;
+    }
+    
+    .anamnese-question {
+        position: relative;  
+        height: auto;
+        display: block;
+        overflow: auto;       
+    }
+
+    hr{
+        .border-dashed-large-gray; 
+        margin: 1% 0 1% 0;
+    }
+
+    .input-edit-anamnese{
+        .input-edit;
+        margin-bottom: 1%;
+    }
+
+    .title-label{
+        font-family: Roboto;
+        color: @main-color-dark;
+        font-size: 2.5vw; 
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .topic-title-label{
+        font-family: Roboto;
+        color: @main-color-dark;
+        font-size: 2vw; 
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+
+    .sub-title-label{
+        font-family: Roboto;
+        color: @main-color;
+        font-size: 1.5vw; 
+        display: block;
+        font-weight: 600;
+    }
+
+    .wrapper-question{
+        position: relative;  
+        height: 15%;
+    }
+
+    .wrapper-switch{
+         position: relative;
+         overflow: auto; 
+         float: left;
+         margin-top: 0.3%; 
+    }
+
+    .wrapper-input-anamnese{
+        position: relative;
+        display: inline;
+        overflow: auto; 
+    }
+
+    .switch-question{
+        padding-right: 1%;
+        text-align: top;
+    }
+
+    input[type="text"] {
+        font-size: 1.5vw !important;
+        line-height: 1.75vw; 
+        font-weight: 400;
+        margin-right: 1%;
+    }
+
+    textarea {
+        font-size: 1.5vw !important;
+        line-height: 1.75vw; 
+        font-weight: 400;  
+        margin-right: 1% !important;      
+    }
+
+    .input-text-micro-edit {
+        width: 12%;
+    }    
+
+    .input-text-small-edit {
+        width: 22%;
+    }
+
+    .input-text-medium-edit {
+        width: 30%;
+    }
+
+    .input-text-large-edit {
+        width: 42%;
+    }
+
+    .input-text-extra-large-edit {
+        width: 95%;
+    }
+
+}

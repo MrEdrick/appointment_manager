@@ -1,0 +1,236 @@
+@import url(style-fonts.less);
+@import url(style-bootstrap.less);
+@import url(style-colors.less);
+@import url(style-input.less);
+
+
+@media screen and (min-width: 200px) and (max-width: 500px),  screen and (orientation: portrait) {
+	body {
+		font-family: Roboto;
+		position: absolute;
+		min-width: 100%;
+		min-height: 600px;
+		height: 100%;
+	}
+
+	.logo-background {
+		position: absolute;
+		height: 55%;
+		min-height: 300px;
+		left: 5%;
+		width: 90%;
+		background-color: #ffffff; 
+	}
+
+	.logo-container {
+		position: absolute;
+		color: @main-color-dark !important;
+		font-family: Roboto;
+		width: 100%; // 512.25 / 853.705
+		height: 55%; // 701.992 / 853.705
+		top: 15%;
+		left: 50%;
+		margin-left: -50%;
+		font-size: 8.5vw;
+		align-content: center;
+		text-align: center;
+
+		& label {
+			font-weight: 600;
+			text-align: center;
+		}
+	}
+
+	.logo {
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		background-image: url("../../../images/logo.svg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.login-background {
+		position: absolute;
+		top: 50%;
+		height: 50%;
+		width: 100%;
+		background-color: #ffffff; 
+	}
+
+	.login-container {
+		position: absolute;
+		color: @main-color-dark !important;
+		font-family: Roboto;
+		min-height: 300px;
+		width: 100%; // 512.25 / 853.705
+		height: 50%; // 701.992 / 853.705
+		top: 15%;
+		left: 50%;
+		margin-left: -50%;
+		font-size: 10vw;
+	}	
+
+
+	.title {
+		display: none;
+	}	
+
+	.login-container input[type="text"], input[type="password"] {
+		width: 82.99755985969192%;
+		line-height: 220%;
+		font-size: 4.5vw;
+		margin-left: 1.96631081287174%;
+		margin-bottom: 1%;
+		padding-left: 9%;
+		font-weight: bolder;
+		color: @text-color-gray;
+		border: 0;
+		box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @back-end-color;
+	}
+
+	.bt-login {
+		color: #ffffff;
+		width: 91.99755985969192%;
+		line-height: 220%;
+		margin-left: 1.96631081287174%;
+		font-size: 5vw;
+		font-weight: bolder;
+		border: 0;
+		box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @back-end-color;
+		background-color: @main-color-dark !important;
+	}
+	
+	.bt-login:hover {
+		background-color: @main-color-light !important;
+	}
+	
+	i {
+		position: absolute;
+		color:@main-color-dark;
+		font-size: 8vw !important;
+		text-align: center;
+		margin-left: 4%;
+		padding-top: 4.5%; 
+	}
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+
+	body {
+		font-family: Roboto;
+		position: absolute;
+		min-width: 100%;
+		min-height: 350px;
+		height: 100%;
+	}
+
+	.logo-background {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		min-height: 350px;
+		width: 50%;
+		background-color: #ffffff; 
+	}
+
+	.logo-container {
+		position: absolute;
+		color: @main-color-dark !important;
+		font-family: Roboto;
+		width: 60.00269413907614%; // 512.25 / 853.705
+		height: 62.22887297134255%; // 701.992 / 853.705
+		min-height: 217px;
+		top: 50%;
+		left: 50%;
+		margin: -31.11443648567128% -30.00134706953807%;
+		font-size: 3.5vw;
+		align-content: center;
+		text-align: center;
+	}
+
+	.logo {
+		margin: 0 auto;
+		height: 66.83747581111305%;
+		width: 69.98743434444975%;
+		background-image: url("../../../images/logo.svg");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.login-background {
+		position: absolute;
+		left: 50%;
+		height: 100%;
+		min-height: 350px;
+		width: 50%;
+		background-color: @main-color-dark; 
+	}
+
+	.login-container {
+		position: absolute;
+		font-family: Roboto;
+		width: 60.00269413907614%; // 512.25 / 853.705
+		height: 62.22887297134255%; // 701.992 / 853.705
+		min-height: 217px;
+		top: 50%;
+		left: 50%;
+		margin: -31.11443648567128% -30.00134706953807%;
+		padding-top: 2.5%;
+		background-color: @main-color-dark; 
+	}	
+
+
+	.title {
+		font-family: Roboto;
+		color: #ffffff !important;
+		font-size: 3.5vw;
+		text-align: center;
+		display: block;
+	}	
+
+	.form-input{
+		margin-top: 10%;
+	}
+
+	.login-container input[type="text"], input[type="password"] {
+		width: 79.99755985969192%;
+		line-height: 180%;
+		font-size: 1.5vw;
+		margin-left: 11.66631081287174%;
+		margin-bottom: 3.3332316608204975%;
+		padding-left: 3.3332316608204975%;
+		font-weight: bolder;
+		color: @text-color-gray;
+		border: 0;
+		box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @main-color-dark-shadow;
+	}
+
+	.bt-login {
+		color: #ffffff;
+		width: 82.999999985969192%;
+		line-height: 160%;
+		margin-left: 11.66631081287174%;
+		margin-bottom: 3.3332316608204975%;
+		margin-right: 3.3332316608204975%;
+		font-size: 2vw;
+		font-weight: bolder;
+		border: 0;
+		box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @main-color-dark-shadow;
+		background-color: @main-color !important;
+	}
+	
+	.bt-login:hover {
+		background-color: @main-color-light !important;
+	}
+	
+	i {
+		position: absolute;
+		color:#ffffff;
+		font-size: 3vw !important;
+		text-align: center;
+		margin-left: 1.3332316608204975%;
+		padding-top: 0.3%; 
+	}
+
+}

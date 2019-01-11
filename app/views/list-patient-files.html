@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>A.M. - Appointment Manager</title>
+
+    <script src="js/jquery-2.2.1.js"></script>
+    <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="js/jquery-dateFormat.js" type="text/javascript"></script>
+    <script src="js/moment.js" type="text/javascript"></script>
+    <script src="js/serializejson.js" type="text/javascript"></script>
+
+    <link href="css/internal/css/style-list.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="wrapper-block search-patient-files">
+
+		<input class="input-filter input-text-large-edit" type="text" name="input-patient-fiile-description" id="input-patient-fiile-description" placeholder="descição do arquivo..." maxlength="70">
+            
+        <input class="input-filter input-text-small-edit" type="text" name="input-patient-file-date" id="input-patient-file-date" placeholder="dd/mm/aaaa" maxlength="11">
+
+        <div class="wrapper-inline wrapper-square-small-file" name="paperclipe-patient-file" id="paperclipe-patient-file">
+            <i class="fa fa-paperclip" aria-hidden="true"></i> 
+        </div>
+            
+        <input type="file" style="display: none" id="input-paperclipe-patient-file" name="input-paperclipe-patient-file">
+    </div>
+
+    <div class="content-list-patient-files" id="content-list-patient-files">
+
+    </div>
+
+    <div id="img-documents-modal" class="img-documents-modal">
+        <div class="img-documents-modal-close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+
+        <img class="img-documents-modal-content">
+    </div>
+
+</body>
+
+</html>

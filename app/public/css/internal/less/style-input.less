@@ -1,0 +1,360 @@
+@import url(style-dimensions.less);
+@import url(style-colors.less);
+@import (less) '../../external/font-awesome.css';
+
+.rounding{
+	border-radius: @round-edge !important;
+	-webkit-border-radius: @round-edge !important;
+	-o-border-radius: @round-edge !important;
+	-moz-border-radius: @round-edge !important; 
+}
+
+.no-rounding{
+	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	-o-border-radius: 0 !important;
+	-moz-border-radius: 0 !important; 
+}
+
+.input-text{
+	color: @text-color-gray !important;
+	border: 0px;
+	box-shadow: @border-width-thin @border-width-thin @border-width-thin @border-width-thin @back-end-color;
+}
+
+.input-textarea {
+	.input-text;
+}
+
+.input-edit{
+    .input-text;
+    margin-top: @border-width;
+    margin-left: @border-width;
+    margin-right: @border-width;
+    margin-bottom: @border-width * 6;
+}
+
+.input-edit-card{
+	.input-text;
+	margin-bottom: @border-width;
+}
+
+.input-filter{
+    .input-text;
+    margin: @border-width;
+}
+
+.input-dropdown{
+	background-color: @main-color-dark;
+	color: #fff;
+	text-align: center;
+    width: 100%;
+    padding: 0px;
+    position: absolute;
+    margin-top: -1 * @border-width-large;
+}
+
+.input-dropdown ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+.input-dropdown ul li:hover{
+    background-color: @main-color;
+}
+
+.input-dropdown ul li a {
+    color: #fff;
+    display: inline;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.bt-large{
+	width: @bt-large-width;
+	height: @bt-large-height;
+	border: 0;
+	color: white !important;
+	background-color: @main-color-dark !important;
+	font-weight: bolder;
+	font-size: 20px !important;
+	padding: 0 !important;
+	text-transform: uppercase;
+}
+
+.bt-small{
+	width: @bt-small-width;
+	height: @bt-small-height;
+	border: 0;
+	font-size: 12px !important;
+	text-transform: uppercase;	
+}
+
+.bt-small-positive{
+	.bt-small;
+	color: #fff !important;
+	background-color: @main-color-dark !important;
+}
+
+.bt-small-negative{
+	.bt-small;
+	color: @main-color-dark !important;
+	background-color: #fff !important;
+}
+
+.bt-medium{
+	width: @bt-medium-width;
+	height: @bt-medium-height;
+	border: 0;
+	font-size: 12px !important;
+	text-transform: uppercase;	
+}
+
+.bt-medium-positive{
+	.bt-medium;
+	color: #fff !important;
+	background-color: @main-color-dark !important;
+}
+
+.bt-medium-negative{
+	.bt-medium;
+	color: @main-color-dark !important;
+	background-color: #fff !important;
+}
+
+.wrapper-circle-small{
+	.circle-small;
+	text-align: center;
+	padding-top: 3px;
+}
+
+.wrapper-circle-small-new{
+	.wrapper-circle-small;
+}
+
+.wrapper-circle-small-new:before{
+	.wrapper-circle-small;
+	position: absolute;
+	color: #fff;
+	font-size: 25px;
+	font-style: normal;
+	font-family: "FontAwesome";
+	content: "\f067";
+}
+
+.wrapper-circle-small-new:hover:before{
+	background-color: @main-color;
+}
+
+.wrapper-circle-small-cancel{
+	.wrapper-circle-small;
+}
+
+.wrapper-circle-small-cancel:before{
+	.wrapper-circle-small;
+	position: absolute;
+	color: #fff;
+	font-size: 25px;
+	font-style: normal;
+	font-family: "FontAwesome";
+	content: "\f00d";
+}
+
+.wrapper-circle-small-cancel:hover:before{
+	background-color: @main-color;
+}
+
+.bt-circle-small{
+	.circle-small;
+	color: #fff;
+	background-color: @main-color-dark;
+	border: 0;
+}
+
+.bt-circle-small-new{
+	.bt-circle-small;
+}
+
+.bt-circle-small-cancel{
+	.bt-circle-small;
+}
+
+.bt-circle-small-new:hover{
+	background-color: @main-color;
+}
+
+
+.wrapper-square-small{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	font-family: "FontAwesome";
+	color: @main-color-dark;
+}
+
+
+.hover-wrapper-square-small{
+	background-color: @main-color;
+	color: #fff;
+}
+
+.wrapper-square-small-edit {
+	.wrapper-square-small;
+	
+	&:hover, &:hover * {
+		.hover-wrapper-square-small;
+	}
+	
+}
+
+.wrapper-square-small-delete {
+	.wrapper-square-small;
+	
+	&:hover, &:hover * {
+		.hover-wrapper-square-small;
+	}
+	
+}
+
+.wrapper-square-small-save{
+	.wrapper-square-small;
+
+	&:hover, &:hover * {
+		.hover-wrapper-square-small;
+	}
+}
+
+.wrapper-square-small-next{
+	.wrapper-square-small;
+
+	&:hover, &:hover * {
+		.hover-wrapper-square-small;
+	}
+}
+
+
+.wrapper-square-small-previous{
+	.wrapper-square-small;
+
+	&:hover, &:hover * {
+		.hover-wrapper-square-small;
+	}
+}
+
+.wrapper-square-small-file{
+	.wrapper-square-small;
+
+	&:hover, &:hover * {
+		.hover-wrapper-square-small;
+	}
+}
+
+.bt-square-small {
+	.square-small;
+	color: @main-color-dark;
+	background-color: #fff;
+	border: 0;
+
+}
+
+.bt-square-small:hover{
+	background-color: @main-color;
+	color: #fff;
+}
+
+.bt-square-small-new{
+	.bt-square-small;
+}
+
+.bt-square-small-cancel{
+	.bt-square-small;
+}
+
+.bt-square-small-save{
+	.bt-square-small;
+}
+
+.bt-square-small-edit{
+	.bt-square-small;
+}
+
+.bt-square-small-delete{
+	.bt-square-small;
+}
+
+.bt-square-small-next{
+	.bt-square-small;
+}
+
+.bt-square-small-previous{
+	.bt-square-small;
+}
+
+.bt-square-small-file{
+	.bt-square-small;		
+}
+
+.form-input-login-before{
+	position: absolute;
+	margin-left: 45px;
+	color: @main-color-dark;
+	font-family: "FontAwesome" !important;
+	padding-left: 5px;
+	margin-right: 5px;
+	font-size: 30px;
+	color: @main-color-dark;
+}
+
+/*Input Yes No*/
+.switch-yes-no {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+}
+
+.switch-yes-no input {display:none;}
+
+.yes-no {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.yes-no:before {
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .yes-no {
+	background-color: @main-color-dark;
+}
+
+input:focus + .yes-no {
+	box-shadow: 0 0 1px @main-color-dark;
+}
+
+input:checked + .yes-no:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+select{
+	padding-top: @border-width !important;
+	padding-bottom: 1px !important;
+}

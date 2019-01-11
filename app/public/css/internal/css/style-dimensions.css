@@ -1,0 +1,35 @@
+.circle-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.square-small {
+  width: 40px;
+  height: 40px;
+}
+.bottom-border {
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #006b77;
+}
+.right-border {
+  border-style: solid;
+  border-width: 0px 1px 0px 0px;
+  border-color: #006b77;
+}
+.left-border {
+  border-style: solid;
+  border-width: 0px 0px 0px 1px;
+  border-color: #006b77;
+}
+.top-border {
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #006b77;
+}
+.border-dashed-large-gray {
+  border-color: #c7c7c7;
+  border-width: 1px;
+  border-style: dashed;
+  width: 100%;
+}

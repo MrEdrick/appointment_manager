@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">	<title>A.M. - Appointment Manager</title>
+
+	<!-- JQuery -->
+	<script src="js/jquery-2.2.1.js"></script>
+	<script src="js/local-functions.js"></script>
+	<script src="js/login-functions.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<link href="css/external/font-awesome.css" rel="stylesheet" />
+
+	<link href="css/internal/css/style-login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<% if(validation.length > 0){ %>
+		<div class="alert alert-danger alert-dismissable modal-dialog center-block">
+			<strong>Atenção!</strong>
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<ul>
+				<% for(var i = 0; i < validation.length; i++) {%>
+					<li>
+						<%=validation[i].msg%>
+					</li>
+					<% } %>
+			</ul>
+		</div>
+		<%}%>
+			<div class="logo-background">
+				<div class='logo-container'>
+					<div class='logo'></div>
+
+					<label> Appointments </label>
+					<label> Manager </label>
+				</div>
+			</div>
+			<div class="login-background">
+
+				<div class="login-container">
+					<div class="title">
+						<label>Hi baby,</label>
+					</div>
+					<div class="title">
+						<label>get inside !</label>
+					</div>
+					<div class="title">
+						<label>:)</label>
+					</div>
+
+
+					<form action="/authenticate" method="post">
+						<div class="form-input">
+							<div class="form-input-email">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<input type="text" name="login" id="login" placeholder="e-mail...">
+							</div>
+							<div class="form-input-password">
+								<i class="fa fa-lock" aria-hidden="true"></i>
+								<input type="password" name="password" id="password" placeholder="senha...">
+							</div>
+							<input name="enter" id="enter" class="bt-login" type="submit" value="Entrar">
+						</div>
+					</form>
+				</div>
+			</div>
+</body>
+
+</html>

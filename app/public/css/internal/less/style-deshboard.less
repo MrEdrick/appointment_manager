@@ -1,0 +1,174 @@
+@import url(style-fonts.less);
+@import url(style-colors.less);
+@import url(style-dimensions.less);
+
+body{
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    font-family: Roboto;
+    overflow-x: hidden;
+    background-color: @place-holder-color; 
+    position: absolute;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
+.content-deshboard-1::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
+label{
+    margin-bottom: 0px !important;
+}
+
+.invisible{
+    display: none;
+    visibility: hidden;
+}
+
+#alert{
+    position: absolute !important;
+    left: 20%;
+    top: 20%;
+}
+
+.base-colors{
+    background-color: @main-color-dark;
+    color: #fff;
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px),  screen and (orientation: portrait) {
+
+    .content-deshboard-1 {
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        margin-top: 8vh;
+        background-color: #fff;
+        overflow: auto;
+    } 
+
+    .menu-deshboard {
+        background-color: @main-color-dark;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        height: 8%;
+        box-shadow: 0px 0px 1px 1px @back-end-color;
+        z-index: 1000;
+
+        & nav {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+
+            & ul{
+                margin: 0;
+                padding: 0;
+                left: 0;
+                list-style-type: none;
+                height: 100%;
+                width: 100%;
+
+                & li {
+                    margin: 0;
+                    padding: 0;
+                    float: left;
+                    position: relative;
+                    font-size: 4vh;
+                    width: 8vh;
+                    height: 100%;
+                    min-height: 100%;
+
+                    &:hover {
+                        background-color: @main-color;
+                    }
+
+                    & span {
+                        padding: 0;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 50%;
+                        left: 50%;
+                        margin: -40% -60%;
+                        padding: 10%;
+
+                        & i {
+                            color: #fff;
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+        
+}
+
+/* set element styles to fit tablet and higher(desktop) */
+@media screen and (min-width: 500px) and (orientation: landscape) {
+
+    .content-deshboard-1 {
+        position: absolute;
+        width: 80%;
+        min-height: 100%;
+        left: 50%;
+        margin-left: -40%;
+        margin-top: 3.45%;
+        background-color: #fff;
+        box-shadow: 0px 5px 10px 2px @back-end-color;
+        overflow: auto;
+    } 
+
+
+    .menu-deshboard {
+        background-color: @main-color-dark;
+        position: absolute;
+        width: 80%;
+        height: 6.9%;
+        left: 50%;
+        margin-left: -40%;
+        box-shadow: 0px 0px 10px 2px @back-end-color;
+        z-index: 0; 
+
+        & ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+
+            & li {
+                float: left;
+                position: relative;
+                text-align: center;
+                font-size: 2.6vw;
+                width: 5%;
+                height: 100%;
+                padding: 0;
+
+                &:hover {
+                    background-color: @main-color;
+                }
+
+                & i {
+                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
+}
+

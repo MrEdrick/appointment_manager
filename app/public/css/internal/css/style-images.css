@@ -1,0 +1,27 @@
+.img-square-medium {
+  width: 80px;
+  height: 80px;
+}
+.wrapper-img-square-medium {
+  background-color: #006b77;
+  width: 80px;
+  height: 80px;
+}
+.wrapper-img-square-large-edit {
+  background-color: #006b77;
+  width: 20%;
+  height: 40%;
+}
+.img-square-extra-large {
+  width: 30% x;
+  height: 30% x;
+}
+.wrapper-img-square-extra-large {
+  background-color: #006b77;
+  width: 30% x;
+  height: 30% x;
+}
+.wrapper-img-square-extra-large img {
+  width: 100%;
+  height: 100%;
+}

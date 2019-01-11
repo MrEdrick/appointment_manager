@@ -1,0 +1,288 @@
+@import url(style-fonts.less);
+@import url(style-colors.less);
+@import url(style-input.less);
+@import url(style-dimensions.less);
+@import url(style-positions-alignments.less);
+@import (less) '../../external/font-awesome.css';
+
+body {
+	font-family: Roboto;
+	margin: 0 auto;
+	background-size: cover;
+    background-color: @place-holder-color;
+}
+
+hr {
+    .border-dashed-large-gray;
+    margin: 0;
+}
+
+.wrapper-flap {
+    background-color: #fff;  
+}
+
+.agreement-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.agreement {
+    display: none;
+    position: absolute;
+}
+
+.agreement-dropdown:hover .agreement {
+    display: block;
+}
+
+.room-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.room {
+    display: none;
+    position: absolute;
+}
+
+.room-dropdown:hover .room {
+    display: block;
+}
+
+.bt-edit {
+    .bt-small-positive;
+    margin: @border-width;
+}
+
+.bt-edit:hover {
+    background-color: @main-color !important;
+}
+
+input {
+    box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @back-end-color !important;
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px),  screen and (orientation: portrait) {
+    .content {
+        position: absolute;
+        background-color: #fff;
+        min-width: 100%;
+        min-height: 100%;
+        padding: 1%; 
+        padding-top: 5%; 
+    }
+
+    li {
+        float: right !important;
+        font-size: 3.2vh !important;
+    }
+
+    #personal-datas, #anamnese, #description-tooth-by-tooth, #patient-files {
+        float: left !important;
+    }
+
+    .input-text-micro-edit {
+        width: 31%;
+    }
+
+    .input-text-extra-small-edit {
+        width: 35%;
+    }
+
+    .input-text-small-edit {
+        width: 40%;
+    }
+
+    .input-text-medium-edit {
+        width: 50%;
+    }
+
+    .input-text-large-edit {
+        width: 60%;
+    }
+
+    .input-text-extra-large-edit {
+        width: 96%;
+    }
+
+    .select-text-small-edit {
+        width: 40%;
+    }
+
+    .select-text-medium {
+        width: 5%;
+    }
+
+    .select-text-large {
+        width: 62%;
+    }
+
+    input[type="text"] {
+        font-size: 2.5vh !important;
+        line-height: 3vh !important;
+        font-weight: 400;
+        margin-right: 0.5% !important; 
+    }
+
+    textarea {
+        font-size: 2.5vh !important;
+        line-height: 3vh !important;
+        font-weight: 400;  
+        margin-right: 0.5% !important;     
+    }
+
+    select {
+        font-size: 2.5vh !important;
+        line-height: 3vh !important;
+        font-weight: 400;   
+        margin-right: 0.5% !important; 
+    }
+
+}
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+    .content {
+        position: absolute;
+        background-color: #fff;
+        margin-top: 3.5%; 
+        font-size: 1.2vw;
+        width: 100%;
+        height: 80%;
+        padding: 1%; 
+    }
+    
+    .wrapper-flap {
+        position: absolute;
+        width: 100%;
+        height: 5%; 
+        padding-left: 8%;   
+    }
+
+    .wrapper-img-square-large{
+        margin: 0 1% 0 1%;
+    }
+
+    .flap-bt {
+        float: left;
+        position: relative;
+        width: 19%;
+        height: 75%;
+        padding: 0.1%;
+        margin: 0.5%;
+        color: #fff;
+        text-align: center;
+        font-size: 1.5vw;
+        background-color: @main-color-dark;
+        box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @back-end-color;
+        &:hover{
+            background-color: @main-color !important;
+        }
+    }
+
+    .wrapper-crud-save-cancel {
+        position: absolute; 
+        width: 6.89%;
+        height: 100%;
+        margin-top: 0;
+        left: 85.7%;
+
+        & div {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            font-size: 2vw !important;
+            padding: 0% !important;
+
+            & i {
+                margin-top: 5% !important;
+                margin-left: 15% !important;
+            }
+        }
+    }
+
+    /* The Close Button */
+    .img-documents-modal-close {
+        position: absolute !important;
+        top: 15px !important;
+        right: 35px !important;
+        color: #f1f1f1 !important;
+        font-size: 40px !important;
+        font-weight: bold !important;
+        transition: 0.3s !important;
+    }
+
+    .img-documents-modal-close:hover,
+    .img-documents-modal-close:focus {
+        color: #bbb !important;
+        text-decoration: none !important;
+        cursor: pointer !important;
+    }
+
+    input[type="text"] {
+        font-size: 1.2vw !important;
+        float: left;
+        line-height: 1.75vw; 
+        font-weight: 400;
+        margin-right: 1%;
+    }
+
+    textarea {
+        font-size: 1.2vw !important;
+        float: left;
+        line-height: 1.75vw; 
+        font-weight: 400;  
+        margin-right: 1% !important;      
+    }
+
+    select {
+        font-size: 1.3vw !important;
+        float: left;
+        line-height: 1.75vw; 
+        font-weight: 400;   
+        margin-right: 1% !important;
+    }
+
+    .topic-title-edit {
+        float: left;
+    }
+
+
+    .wrapper-img-square-large-edit {
+        float: left;
+        margin: 0 1% 1% 0;
+        box-shadow: 0 @border-width-thin @border-width-thin @border-width-thin @back-end-color;
+    }
+
+    .input-text-micro-edit {
+        width: 12%;
+    }    
+
+    .input-text-small-edit {
+        width: 22%;
+    }
+
+    .input-text-medium-edit {
+        width: 30%;
+    }
+
+    .input-text-large-edit {
+        width: 42%;
+    }
+
+    .input-text-extra-large-edit {
+        width: 78%;
+    }
+
+    .select-text-small-edit {
+        width: 22%;
+    }
+
+    .select-text-medium-edit {
+        width: 30%;
+    }
+
+    .select-text-large-edit {
+        width: 42%;
+    }
+
+}
