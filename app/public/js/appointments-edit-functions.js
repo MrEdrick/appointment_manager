@@ -134,27 +134,31 @@ listCitys = function (idState) {
 
 
 fillRoomScreen = function (appointments) {
-    $.when(listRooms()).then(
-        $('#list-room').val(appointments.ID_ROOM).prop('selected', true)
-    )
+    $('#list-rooms option')
+    .removeAttr('selected')
+    .filter('[value=' + String(appointments.ID_ROOM) + ']')
+    .prop('selected', true)
 }
 
 fillAgreementScreen = function (appointments) {
-    $.when(listAgrrements()).then(
-        $('#list-agreements').val(appointments.ID_AGREEMENT).prop('selected', true)
-    )
+    $('#list-agreements option')
+    .removeAttr('selected')
+    .filter('[value=' + String(appointments.ID_AGREEMENT) + ']')
+    .prop('selected', true)
 }
 
 fillDoctorScreen = function (appointments) {
-    $.when(listDoctors()).then(
-        $('#list-doctors').val(appointments.ID_DOCTOR).prop('selected', true)
-    );
+    $('#list-doctors option')
+    .removeAttr('selected')
+    .filter('[value=' + String(appointments.ID_DOCTOR) + ']')
+    .prop('selected', true)
 }
 
 fillAppointmentstatusScreen = function (appointments) {
-    $.when(listAppointmentStatus()).then(
-        $('#list-appointment-status').val(appointments.ID_APPOINTMENT_STATUS).prop('selected', true)
-    )
+    $('#list-appointment-status option')
+    .removeAttr('selected')
+    .filter('[value=' + String(appointments.ID_APPOINTMENT_STATUS) + ']')
+    .prop('selected', true)
 }
 
 fillPatientScreen = function (patients) {
@@ -318,11 +322,11 @@ $(window).unload(
 
 $(document).ready(function ($) {
 
-$(window).resize(function(event){
-	if (PhaserInput.KeyboardOpen == true) {
-		return;
-	}
-});
+    $(window).resize(function(event){
+        if (PhaserInput.KeyboardOpen == true) {
+            return;
+        }
+    });
 	let flapHtml = '';
 	let menuHtml = '';
 
