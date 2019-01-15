@@ -122,11 +122,12 @@ module.exports.update = function (application, req, res) {
 
 module.exports.select = function (application, req, callback) {
 	var err;
-	var filter = 'WHERE STATUS = ?';
-	var parameters = ['A'];
+	var filter = 'WHERE 1 = ?';
+	var parameters = ['1'];
 
 	if ((req.body.constructor === Object) && (Object.keys(req.body).length > 0)) {
 		if (req.body.type == 'searchList') {
+
 			if ((req.body.cro != undefined) && (req.body.cro != '')) {
 				filter = filter + ' AND do.CRO LIKE ?';
 				parameters.push(req.body.cro);
@@ -143,7 +144,17 @@ module.exports.select = function (application, req, callback) {
 				filter = filter + ' AND do.CRO = ?';
 				parameters.push(parseInt(req.body.cro));
 			}
+
+			if ((req.body.idDoctor != '') && (req.body.idDoctor != undefined)) {
+				filter = filter + ' AND do.ID_DOCTOR = ?';
+				parameters.push(parseInt(req.body.idDoctor));
+			}
 		}
+	}
+	else {
+		console.log('A');
+		filter = filter + ' AND do.STATUS = ?';
+		parameters.push('A');
 	};
 
 	var dao = new application.app.models.dao;

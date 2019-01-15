@@ -133,28 +133,58 @@ listCitys = function (idState) {
 }
 
 
-fillRoomScreen = function (appointments) {
+selectRoomScreen = function (appointments) {
     $('#list-rooms option')
     .removeAttr('selected')
     .filter('[value=' + String(appointments.ID_ROOM) + ']')
     .prop('selected', true)
 }
 
-fillAgreementScreen = function (appointments) {
+selectAgreementScreen = function (appointments) {
     $('#list-agreements option')
     .removeAttr('selected')
     .filter('[value=' + String(appointments.ID_AGREEMENT) + ']')
     .prop('selected', true)
 }
 
-fillDoctorScreen = function (appointments) {
-    $('#list-doctors option')
-    .removeAttr('selected')
-    .filter('[value=' + String(appointments.ID_DOCTOR) + ']')
-    .prop('selected', true)
+selectDoctorScreen = function (appointments) {
+    if (!($('#list-doctors option').filter(
+            function(){ 
+                return $(this).val() == appointments.ID_DOCTOR; 
+            }).length > 0)) {
+        
+        let xhr = new XMLHttpRequest();
+
+        var processRequest = function () {
+            if (xhr.readyState == 4) {
+                var doctor = $.parseJSON(xhr.responseText);
+                console.log(doctor);
+                if (doctor.length > 0) {
+                    $('#list-doctors').append('<option value=' + doctor[0].ID_DOCTOR + '>' + doctor[0].NAME + '</option>');
+                
+                    $('#list-doctors option')
+                    .removeAttr('selected')
+                    .filter('[value=' + String(doctor[0].ID_DOCTOR) + ']')
+                    .prop('selected', true)
+                }
+    
+            }
+        }
+
+        xhr.onreadystatechange = processRequest;
+        xhr.open('POST', '/doctors');
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify({ 'type': 'searchOne', 'idDoctor': appointments.ID_DOCTOR.toString()}));
+            
+    } else {
+        $('#list-doctors option')
+        .removeAttr('selected')
+        .filter('[value=' + String(appointments.ID_DOCTOR) + ']')
+        .prop('selected', true)
+    }
 }
 
-fillAppointmentstatusScreen = function (appointments) {
+selectAppointmentstatusScreen = function (appointments) {
     $('#list-appointment-status option')
     .removeAttr('selected')
     .filter('[value=' + String(appointments.ID_APPOINTMENT_STATUS) + ']')
@@ -546,10 +576,10 @@ $(document).ready(function ($) {
                 }
 
                 fillPatientScreen(appointments[0]);
-                fillDoctorScreen(appointments[0]);
-                fillAgreementScreen(appointments[0]);
-                fillRoomScreen(appointments[0]);
-                fillAppointmentstatusScreen(appointments[0]);
+                selectDoctorScreen(appointments[0]);
+                selectAgreementScreen(appointments[0]);
+                selectRoomScreen(appointments[0]);
+                selectAppointmentstatusScreen(appointments[0]);
                 fillToothByToothScreen(appointments[0]);
                 fillAnamneseScreen(appointments[0]);
                 fillPatientFiles(appointments[0]);
