@@ -83,7 +83,7 @@ module.exports.delete = function (application, req, res) {
 					dao.select(application,
 						tablesDoctor,
 						columnsDoctor,
-						filter, parameters, 0, function (err, rows) { });
+						filter, parameters, 0, '', function (err, rows) { });
 				}
 			});
 		}
@@ -151,7 +151,7 @@ module.exports.select = function (application, req, callback) {
 	dao.select(application,
 		tablesDoctor,
 		columnsDoctor,
-		filter, parameters, undefined, function (err, rows) {
+		filter, parameters, undefined, ' ORDER BY do.NAME ', function (err, rows) {
 			callback(err, rows);
 		});
 }

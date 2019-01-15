@@ -78,7 +78,7 @@ module.exports.delete = function (application, req, res) {
                     dao.select(application,
                         tablesAppointmentStatus,
                         columnsAppointmentStatus,
-                        filter, parameters, 0, function (err, rows) {
+                        filter, parameters, 0, '', function (err, rows) {
                             callback(err, rows);
                         });
                 }
@@ -126,14 +126,14 @@ module.exports.select = function (application, req, callback) {
     if ((req.body.constructor === Object) && (Object.keys(req.body).length > 0)) {
         if (req.body.type == 'searchList') {
             if ((req.body.description != undefined) && (req.body.description != '')) {
-                filter = filter + ' AND sa.DESCRIPTION LIKE ?';
+                filter = filter + ' AND ps.DESCRIPTION LIKE ?';
                 parameters.push(req.body.description);
             }
         }
 
         if (req.body.type == 'searchOne') {
             if ((req.body.idAppointmentStatus != '0') && (req.body.idAppointmentStatus != '') && (req.body.idAppointmentStatus != undefined)) {
-                filter = filter + ' AND sa.ID_APPOINTMENT_STATUS = ?';
+                filter = filter + ' AND ps.ID_APPOINTMENT_STATUS = ?';
                 parameters.push(parseInt(req.body.idAppointmentStatus));
             }
         }
@@ -144,7 +144,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesAppointmentStatus,
         columnsAppointmentStatus,
-        filter, parameters, undefined, function (err, rows) { 
+        filter, parameters, undefined, ' ORDER BY ps.DESCRIPTION ', function (err, rows) { 
             callback(err, rows);
         });
 }

@@ -96,7 +96,7 @@ module.exports.delete = function (application, req, res) {
 					dao.select(application,
 						tablesPatient,
 						columnsPatiente,
-						filter, parameters, 0, function (err, rows) {
+						filter, parameters, 0, '', function (err, rows) {
 							callback(err, rows);
 						});
 				}
@@ -202,7 +202,7 @@ module.exports.select = function (application, req, callback) {
 	dao.select(application,
 		tablesPatient,
 		columnsPatiente,
-		filter, parameters, index, function (err, rows) {
+		filter, parameters, index, ' ORDER BY pa.NAME ', function (err, rows) {
 			callback(err, rows);
 		});
 }

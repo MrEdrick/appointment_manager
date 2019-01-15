@@ -61,7 +61,7 @@ patientFileInsertUpdate = function (dao, application, patientFile, res, callback
 		parameters[0] = 2;
 	}
 
-	dao.select(application, 'patients_files', 'ID_PATIENT_FILE', filter, parameters, 0,
+	dao.select(application, 'patients_files', 'ID_PATIENT_FILE', filter, parameters, 0, '',
 		function (err, rows) {
 			if (err != null) {
 				res.render('edit-appointments', { validation: erros });
@@ -149,7 +149,7 @@ module.exports.delete = function (application, req, res) {
                     dao.select(application,
                         tables,
                         columns,
-                        filter, parameters, 0, function (err, rows) {
+                        filter, parameters, 0, '', function (err, rows) {
                             callback(err, rows);
                         });
                 }
@@ -241,7 +241,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tables,
         columns,
-        filter, parameters, index, function (err, rows) {
+        filter, parameters, index, '', function (err, rows) {
             callback(err, rows);
         });
 }

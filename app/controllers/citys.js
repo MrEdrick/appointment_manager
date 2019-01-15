@@ -47,7 +47,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesCity,
         columnsCity,
-        filter, parameters, undefined, function (err, rows) {
+        filter, parameters, undefined, ' ORDER BY ci.CITY ', function (err, rows) {
             callback(err, rows);
         });
 }

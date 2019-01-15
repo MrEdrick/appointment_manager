@@ -78,7 +78,7 @@ module.exports.delete = function (application, req, res) {
                     dao.select(application,
                         tablesRoom,
                         columnsRoom,
-                        filter, parameters, 0, function (err, rows) {
+                        filter, parameters, 0, '', function (err, rows) {
                             callback(err, rows);
                         });
                 }
@@ -144,7 +144,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesRoom,
         columnsRoom,
-        filter, parameters, undefined, function (err, rows) { 
+        filter, parameters, undefined, ' ORDER BY ro.DESCRIPTION ', function (err, rows) { 
             callback(err, rows);
         });
 }

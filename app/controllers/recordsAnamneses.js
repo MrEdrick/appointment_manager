@@ -36,7 +36,7 @@ module.exports.select = function (application, req, callback) {
 
     var dao = new application.app.models.dao;
 
-    dao.select(application, tables, columns, filter, parameters, undefined, function (err, rows) {
+    dao.select(application, tables, columns, filter, parameters, undefined, '', function (err, rows) {
             callback(err, rows);
         });
 }

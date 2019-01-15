@@ -76,7 +76,7 @@ module.exports.delete = function (application, req, res) {
                     dao.select(application,
                         tablesAgreement,
                         columnsAgreement,
-                        filter, parameters, 0, function (err, rows) { });
+                        filter, parameters, 0, '', function (err, rows) { });
                     }
             });
         }
@@ -140,7 +140,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesAgreement,
         columnsAgreement,
-        filter, parameters, undefined, function (err, rows) { 
+        filter, parameters, undefined, ' ORDER BY ag.DESCRIPTION ', function (err, rows) { 
             callback(err, rows);
         });
 }

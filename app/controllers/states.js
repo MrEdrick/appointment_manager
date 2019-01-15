@@ -29,7 +29,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesState,
         columnsState,
-        filter, parameters, undefined, function (err, rows) { 
+        filter, parameters, undefined, ' ORDER BY st.STATE ', function (err, rows) { 
             callback(err, rows);
         });
 }

@@ -35,7 +35,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesDistrict,
         columnsDistrict,
-        filter, parameters, undefined, function (err, rows) { 
+        filter, parameters, undefined, ' ORDER BY di.DISTRICT ', function (err, rows) { 
             callback(err, rows);
         });
 }

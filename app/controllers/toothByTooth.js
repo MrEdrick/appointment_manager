@@ -50,7 +50,7 @@ module.exports.select = function (application, req, callback) {
     dao.select(application,
         tablesToothByTooth,
         columnsToothByTooth,
-        filter, parameters, undefined, function (err, rows) {
+        filter, parameters, undefined, '', function (err, rows) {
             callback(err, rows);
         });
 }

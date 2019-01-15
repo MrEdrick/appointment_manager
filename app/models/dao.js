@@ -11,8 +11,8 @@ DAO.prototype.insert = function(application, table, parametersJSON, parametersSt
 };    
  
 
-DAO.prototype.select = function(application, table, fields, filter, parameters, index, callback){
-    application.config.db_connection('SELECT ' + fields + ' FROM ' + table + ' ' + filter + (index != undefined ? ' LIMIT ' + (index  * 6) + ', 6' : ''), parameters, function(err, rows){
+DAO.prototype.select = function(application, table, fields, filter, parameters, index, order_by, callback){
+    application.config.db_connection('SELECT ' + fields + ' FROM ' + table + ' ' + filter + (index != undefined ? ' LIMIT ' + (index  * 6) + ', 6' : '') + ' ' + order_by, parameters, function(err, rows){
     	return callback(err, rows);
     });
 };

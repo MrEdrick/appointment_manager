@@ -175,7 +175,7 @@ appointmentPatientFilesInsertUpdate = function (dao, application, patientFiles, 
 		filter = ' WHERE ID_PATIENT_FILE = ? ';
 		parameters = [patientFiles[i].ID_PATIENT_FILE];
 
-		dao.select(application, 'patients_files', 'ID_PATIENT_FILE', filter, parameters, 0,
+		dao.select(application, 'patients_files', 'ID_PATIENT_FILE', filter, parameters, 0, '',
 			function (erros, rows) {
 				if (erros != null) {
 					loop(0, erros, patientFiles, 'insert');
@@ -258,7 +258,7 @@ appointmentAnamneseAnswersInsertUpdate = function (dao, application, anamneseAns
 		filter = ' WHERE ID_PATIENT = ? AND ID_ANAMNESE_QUESTION = ? ';
 		parameters = [anamneseAnswer[i].ID_PATIENT, anamneseAnswer[i].ID_ANAMNESE_QUESTION];
 
-		dao.select(application, 'answers_anamneses_questions', 'ID_ANSWER_ANAMNESE_QUESTION', filter, parameters, 0,
+		dao.select(application, 'answers_anamneses_questions', 'ID_ANSWER_ANAMNESE_QUESTION', filter, parameters, 0, '',
 			function (erros, rows) {
 				if (erros != null) {
 					loopInsert(0, erros);
@@ -329,7 +329,7 @@ appointmentToothByToothInsertUpdate = function (dao, application, toothByTooth, 
 		filter = ' WHERE ID_PATIENT = ? AND TOOTH_NUMBER = ? ';
 		parameters = [toothByTooth[i].ID_PATIENT, toothByTooth[i].TOOTH_NUMBER];
 
-		dao.select(application, 'tooth_by_tooth', 'ID_TOOTH_BY_TOOTH', filter, parameters, 0,
+		dao.select(application, 'tooth_by_tooth', 'ID_TOOTH_BY_TOOTH', filter, parameters, 0, '',
 			function (err, rows) {
 				if (err != null) {
 					loopInsert(0, err);
@@ -396,7 +396,7 @@ appointmentPatientInsertUpdate = function (dao, application, appointment, res, c
 		parameters[0] = 2;
 	}
 
-	dao.select(application, 'patients', 'ID_PATIENT', filter, parameters, 0,
+	dao.select(application, 'patients', 'ID_PATIENT', filter, parameters, 0, '',
 		function (err, rows) {
 			if (err != null) {
 				res.render('edit-appointments', { validation: erros });
@@ -711,7 +711,7 @@ module.exports.select = function (application, req, callback) {
 	dao.select(application,
 		tablesAppointment,
 		columnsAppointment,
-		filter, parameters, index, function (err, rows) {
+		filter, parameters, index, '', function (err, rows) {
 			callback(err, rows);
 			return;
 		});
